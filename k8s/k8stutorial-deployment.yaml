@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8stutorial-deployment
+  labels:
+    app: k8stutorial
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k8stutorial
+  template:
+    metadata:
+      labels:
+        app: k8stutorial
+    spec:
+      containers:
+      - name: k8stutorial
+        image: sgccarey/website
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

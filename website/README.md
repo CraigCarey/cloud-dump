@@ -1,4 +1,4 @@
-Building and tagging image
+## Building and tagging image
 
 ```bash
 docker build . -t sgccarey/website
